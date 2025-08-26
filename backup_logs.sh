@@ -9,7 +9,7 @@ logsdate="logs"-$(date +'%Y-%m-%d').tar.gz
 #Compressing logs directory 
 echo -e "\nGenerando el archivo de logs.."
 tar -czf "$logsdate" "$pathdir" 
-echo -e "\Archivo creado correctamente"
+echo -e "\nArchivo creado correctamente"
 ls -l $logsdate
 
 #Creating backups Directory
