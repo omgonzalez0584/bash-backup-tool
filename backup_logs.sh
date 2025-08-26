@@ -7,16 +7,16 @@ logsdate="logs"-$(date +'%Y-%m-%d').tar.gz
 
 #Compressing logs directory 
 echo "Generando el archivo de logs.."
-tar -czf $logsdate $pathdir 
-sleep 3
-echo "listo..!"
+tar -czf "$logsdate" "$pathdir" 
+echo "Archivo creado correctamente"
+ls -l $logdate
 
 #Creating BackUpDirectory
 if [ -d /backups ]
 then 
     mv $logsdate /backups
 else
-   varDir=$(mkdir /backups)
+   mkdir /backups
    mv $logsdate /backups
 fi
 
